@@ -334,6 +334,100 @@ h2 {
   gap: 1rem;
 }
 
+.dp-block {
+  margin-top: 1.4rem;
+}
+
+.dp-block > h2 {
+  margin-bottom: 0.6rem;
+}
+
+.dp-block > p {
+  color: var(--muted);
+  margin-top: 0;
+}
+
+.hmw {
+  margin-top: 0.8rem;
+  padding: 0.8rem;
+  border-left: 3px solid #2f7cf6;
+  border-radius: 0.5rem;
+  background: rgba(233, 241, 255, 0.16);
+  font-style: italic;
+  font-weight: 600;
+}
+
+.dp-grid {
+  display: grid;
+  gap: 0.8rem;
+}
+
+.dp-grid.two {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.dp-grid.three {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.dp-card {
+  border: 1px solid var(--border);
+  border-radius: 0.8rem;
+  padding: 0.9rem;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.045), rgba(255, 255, 255, 0.015));
+}
+
+.dp-card h3 {
+  margin-top: 0;
+  margin-bottom: 0.45rem;
+}
+
+.dp-card p {
+  color: var(--muted);
+  margin: 0.35rem 0;
+}
+
+.dp-card ul {
+  margin: 0;
+  padding-left: 1rem;
+  color: var(--muted);
+}
+
+.moscow.must {
+  border-color: rgba(86, 222, 137, 0.6);
+}
+
+.moscow.should {
+  border-color: rgba(109, 170, 255, 0.6);
+}
+
+.moscow.could {
+  border-color: rgba(231, 205, 80, 0.6);
+}
+
+.moscow.wont {
+  border-color: rgba(198, 198, 198, 0.5);
+}
+
+.proto-stage {
+  border-left: 3px solid #2f7cf6;
+  border-radius: 0.65rem;
+  background: rgba(255, 255, 255, 0.04);
+  padding: 0.8rem 0.9rem;
+  margin-bottom: 0.7rem;
+}
+
+.proto-stage h3 {
+  margin-top: 0;
+  margin-bottom: 0.4rem;
+}
+
+.proto-stage ul {
+  margin: 0;
+  padding-left: 1rem;
+  color: var(--muted);
+}
+
 
 .note-block {
   border: 1px solid var(--border);
@@ -466,6 +560,11 @@ h2 {
 
   .design-notes {
     gap: 0.7rem;
+  }
+
+  .dp-grid.two,
+  .dp-grid.three {
+    grid-template-columns: 1fr;
   }
 
   .note-block {
