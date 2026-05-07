@@ -366,62 +366,6 @@ h2 {
   background: rgba(255, 255, 255, 0.06);
 }
 
-.note-visual {
-  margin-top: 0.65rem;
-  border-radius: 0.55rem;
-  border: 1px solid rgba(255, 255, 255, 0.12);
-  background: rgba(6, 16, 36, 0.55);
-  padding: 0.5rem;
-}
-
-.visual-lines,
-.visual-bars {
-  display: flex;
-  align-items: flex-end;
-  gap: 0.4rem;
-  min-height: 40px;
-}
-
-.visual-lines span {
-  height: 3px;
-  border-radius: 999px;
-  background: rgba(74, 242, 181, 0.85);
-}
-
-.visual-lines span:nth-child(1) {
-  width: 42%;
-}
-
-.visual-lines span:nth-child(2) {
-  width: 68%;
-}
-
-.visual-lines span:nth-child(3) {
-  width: 55%;
-}
-
-.visual-bars span {
-  width: 18%;
-  border-radius: 0.3rem 0.3rem 0.1rem 0.1rem;
-  background: linear-gradient(180deg, rgba(74, 242, 181, 0.95), rgba(74, 242, 181, 0.35));
-}
-
-.visual-bars span:nth-child(1) {
-  height: 22px;
-}
-
-.visual-bars span:nth-child(2) {
-  height: 30px;
-}
-
-.visual-bars span:nth-child(3) {
-  height: 16px;
-}
-
-.visual-bars span:nth-child(4) {
-  height: 34px;
-}
-
 .metric {
   text-align: center;
 }
