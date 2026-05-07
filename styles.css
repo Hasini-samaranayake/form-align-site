@@ -1,0 +1,286 @@
+:root {
+  --bg: #081225;
+  --bg-soft: #0f1d36;
+  --card: #111f3a;
+  --text: #eaf0ff;
+  --muted: #aebbd8;
+  --brand: #4db6ff;
+  --brand-2: #8d9bff;
+  --border: rgba(255, 255, 255, 0.12);
+  --max: 1100px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  background: radial-gradient(circle at top right, #122a55, var(--bg) 60%);
+  color: var(--text);
+  line-height: 1.6;
+}
+
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 30;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 1.25rem;
+  backdrop-filter: blur(8px);
+  background: rgba(8, 18, 37, 0.8);
+  border-bottom: 1px solid var(--border);
+}
+
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  color: var(--text);
+  text-decoration: none;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+
+.brand-mark {
+  width: 2rem;
+  height: 2rem;
+  border-radius: 0.55rem;
+  display: grid;
+  place-items: center;
+  color: #061023;
+  font-weight: 800;
+  background: linear-gradient(120deg, var(--brand), var(--brand-2));
+}
+
+.menu-toggle {
+  display: none;
+  border: 1px solid var(--border);
+  background: transparent;
+  color: var(--text);
+  border-radius: 0.5rem;
+  padding: 0.45rem 0.7rem;
+}
+
+.nav {
+  display: flex;
+  gap: 1rem;
+}
+
+.nav a {
+  color: var(--muted);
+  text-decoration: none;
+  font-size: 0.94rem;
+}
+
+.nav a:hover {
+  color: var(--brand);
+}
+
+.section {
+  width: min(var(--max), 92vw);
+  margin: 0 auto;
+  padding: 4.8rem 0;
+}
+
+.hero {
+  display: grid;
+  grid-template-columns: 1.3fr 1fr;
+  gap: 2rem;
+  align-items: stretch;
+  min-height: 72vh;
+  padding-top: 3.25rem;
+}
+
+.eyebrow {
+  margin: 0;
+  color: var(--brand);
+  text-transform: uppercase;
+  font-size: 0.77rem;
+  letter-spacing: 0.12em;
+  font-weight: 600;
+}
+
+h1,
+h2,
+h3 {
+  line-height: 1.2;
+  margin-top: 0.7rem;
+  margin-bottom: 0.7rem;
+}
+
+h1 {
+  font-size: clamp(2rem, 4.2vw, 3.9rem);
+  max-width: 14ch;
+}
+
+h2 {
+  font-size: clamp(1.65rem, 2.5vw, 2.5rem);
+}
+
+.subtitle {
+  color: var(--muted);
+  max-width: 50ch;
+}
+
+.subtitle.max {
+  max-width: 62ch;
+}
+
+.cta-row {
+  display: flex;
+  gap: 0.8rem;
+  margin-top: 1.25rem;
+  flex-wrap: wrap;
+}
+
+.btn {
+  text-decoration: none;
+  padding: 0.75rem 1.15rem;
+  border-radius: 999px;
+  display: inline-block;
+  font-weight: 600;
+}
+
+.btn-primary {
+  color: #061023;
+  background: linear-gradient(120deg, var(--brand), var(--brand-2));
+}
+
+.btn-secondary {
+  color: var(--text);
+  border: 1px solid var(--border);
+}
+
+.hero-card,
+.card,
+.step {
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.04), rgba(255, 255, 255, 0.015));
+  border: 1px solid var(--border);
+  border-radius: 1rem;
+}
+
+.hero-card {
+  padding: 1.2rem 1.15rem;
+}
+
+.hero-card ul {
+  margin: 1rem 0 0;
+  padding-left: 1rem;
+  color: var(--muted);
+}
+
+.panel {
+  background: var(--bg-soft);
+  border-radius: 1.2rem;
+  padding: 2.4rem 1.2rem;
+}
+
+.grid {
+  display: grid;
+  gap: 1rem;
+}
+
+.grid.three {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.grid.two {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.card {
+  padding: 1rem;
+}
+
+.card p {
+  margin-bottom: 0;
+  color: var(--muted);
+}
+
+.timeline {
+  margin-top: 1rem;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.step {
+  padding: 1rem;
+}
+
+.step-number {
+  font-size: 0.76rem;
+  font-weight: 700;
+  letter-spacing: 0.11em;
+  color: var(--brand);
+}
+
+.metric {
+  text-align: center;
+}
+
+.metric-value {
+  margin: 0.25rem 0;
+  font-size: clamp(2rem, 5vw, 3rem);
+  font-weight: 800;
+  color: var(--brand);
+}
+
+.metric-label {
+  margin: 0;
+  color: var(--muted);
+}
+
+.contact {
+  text-align: center;
+}
+
+.site-footer {
+  border-top: 1px solid var(--border);
+  padding: 1.6rem 1rem 2.2rem;
+  text-align: center;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+@media (max-width: 940px) {
+  .hero,
+  .grid.three,
+  .timeline,
+  .grid.two {
+    grid-template-columns: 1fr;
+  }
+
+  .section {
+    padding: 3.9rem 0;
+  }
+
+  .nav {
+    position: absolute;
+    top: 100%;
+    right: 1rem;
+    left: 1rem;
+    display: none;
+    flex-direction: column;
+    padding: 0.9rem;
+    border: 1px solid var(--border);
+    border-radius: 0.8rem;
+    background: rgba(8, 18, 37, 0.96);
+  }
+
+  .nav.open {
+    display: flex;
+  }
+
+  .menu-toggle {
+    display: inline-block;
+  }
+}
