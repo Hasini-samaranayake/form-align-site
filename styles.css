@@ -251,6 +251,35 @@ h2 {
   text-align: center;
 }
 
+.mat-showcase {
+  text-align: center;
+}
+
+.mat-image {
+  width: min(100%, 900px);
+  margin-top: 1rem;
+  border-radius: 1rem;
+  border: 1px solid var(--border);
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  object-fit: cover;
+}
+
+.mat-image-fallback {
+  display: none;
+  color: var(--muted);
+  margin-top: 1rem;
+}
+
+.mat-showcase.missing-image .mat-image {
+  display: none;
+}
+
+.mat-showcase.missing-image .mat-image-fallback {
+  display: block;
+}
+
 .process-back {
   margin-top: 1rem;
 }
