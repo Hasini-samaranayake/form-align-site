@@ -32,7 +32,20 @@
       <section id="design-process" class="section">
         <p class="eyebrow">Design Process</p>
         <h1>Design Process</h1>
-        <div class="dp-block">
+        <div class="process-nav">
+          <a href="#dp-problem">Problem</a>
+          <a href="#dp-users">Users</a>
+          <a href="#dp-needs">Needs</a>
+          <a href="#dp-requirements">Requirements</a>
+          <a href="#dp-priority">Priority</a>
+          <a href="#dp-testing">Validation</a>
+        </div>
+        <div class="kpi-ribbon">
+          <div><span>Accuracy</span><strong>95%</strong></div>
+          <div><span>Response</span><strong>&lt;50ms</strong></div>
+          <div><span>Core Stack</span><strong>IMU + Pressure + BLE</strong></div>
+        </div>
+        <div id="dp-problem" class="dp-block">
           <h2>Problem</h2>
           <p>
             The initial challenge centred on improving form accuracy and injury
@@ -47,7 +60,7 @@
           </div>
         </div>
 
-        <div class="dp-block">
+        <div id="dp-users" class="dp-block">
           <h2>Target Users</h2>
           <div class="dp-grid three">
             <article class="dp-card">
@@ -65,7 +78,7 @@
           </div>
         </div>
 
-        <div class="dp-block">
+        <div id="dp-needs" class="dp-block">
           <h2>User Needs</h2>
           <div class="dp-grid three">
             <article class="dp-card">
@@ -95,7 +108,7 @@
           </div>
         </div>
 
-        <div class="dp-block">
+        <div id="dp-requirements" class="dp-block">
           <h2>Design Requirements</h2>
           <div class="dp-grid two">
             <article class="dp-card">
@@ -142,7 +155,7 @@
           </p>
         </div>
 
-        <div class="dp-block">
+        <div id="dp-priority" class="dp-block">
           <h2>Feature Prioritisation</h2>
           <div class="dp-grid two">
             <article class="dp-card moscow must">
@@ -208,18 +221,26 @@
           </div>
         </div>
 
-        <div class="dp-block">
+        <div id="dp-testing" class="dp-block">
           <h2>Testing &amp; Validation</h2>
           <div class="dp-grid two">
             <article class="dp-card">
               <h3>Technical Validation</h3>
               <p><strong>IMU Accuracy:</strong> +/-1.8 degrees vs reference</p>
               <p><strong>BLE Reliability:</strong> 99%+ packet delivery at test range</p>
+              <div class="metric-bars">
+                <div><label>IMU Accuracy</label><span style="width:82%"></span></div>
+                <div><label>BLE Reliability</label><span style="width:99%"></span></div>
+              </div>
             </article>
             <article class="dp-card">
               <h3>Usability Testing</h3>
               <p><strong>Participants:</strong> n=12 think-aloud sessions</p>
               <p><strong>Key Insight:</strong> calibration flow needed UX simplification</p>
+              <div class="metric-bars">
+                <div><label>SUS Score</label><span style="width:78%"></span></div>
+                <div><label>Task Success</label><span style="width:84%"></span></div>
+              </div>
             </article>
           </div>
         </div>
