@@ -33,56 +33,90 @@
         <p class="eyebrow">Engineering Portfolio Tab</p>
         <h1>Design Process</h1>
         <p class="subtitle max">
-          This project followed an iterative engineering design process to move
-          from concept to validated real-time biomechanical system.
+          Adapted from the product design exercise framework, this process
+          combines user-centred design with embedded systems constraints to build
+          a real-time adaptive Pilates mat.
         </p>
         <div class="timeline">
           <article class="step">
             <span class="step-number">01</span>
-            <h3>Define Problem</h3>
+            <h3>Problem Clarification</h3>
             <p>
-              Identified a key Pilates challenge: users struggle to self-correct
-              subtle posture errors without an instructor.
+              Users often cannot identify subtle posture errors during home
+              Pilates sessions, resulting in reduced exercise quality and higher
+              risk of strain without expert supervision.
             </p>
           </article>
           <article class="step">
             <span class="step-number">02</span>
-            <h3>Set Requirements</h3>
+            <h3>Target Users</h3>
             <p>
-              Established design targets for high detection accuracy, low latency,
-              stable feedback, and practical embedded implementation.
+              Primary users were beginner-to-intermediate Pilates practitioners
+              training independently. Secondary users included coaches requiring
+              objective movement and pressure data.
             </p>
           </article>
           <article class="step">
             <span class="step-number">03</span>
-            <h3>Prototype Hardware</h3>
+            <h3>User Needs</h3>
             <p>
-              Built multiple mat prototypes with varied IMU placement and force
-              sensor layouts to compare coverage, reliability, and signal quality.
+              Key needs were immediate correction cues, comfortable form factor,
+              trustworthy alignment feedback, and a simple interface that does not
+              interrupt exercise flow.
             </p>
           </article>
           <article class="step">
             <span class="step-number">04</span>
-            <h3>Develop Algorithms</h3>
+            <h3>Design Requirements</h3>
             <p>
-              Implemented low-latency C++ filtering and feature extraction to
-              mitigate noise and produce robust motion-force indicators.
+              Requirements included sub-50ms feedback, reliable Bluetooth
+              communication, stable sensing under movement noise, and practical
+              hardware constraints for Arduino-based prototyping.
             </p>
           </article>
           <article class="step">
             <span class="step-number">05</span>
-            <h3>Validate &amp; Iterate</h3>
+            <h3>Ideation</h3>
             <p>
-              Tested against real movement scenarios, measured false detections,
-              and iteratively tuned thresholds and fusion logic.
+              Explored alternative sensing architectures and feedback strategies,
+              comparing IMU-only, pressure-only, and sensor-fusion approaches to
+              maximise posture detection reliability.
             </p>
           </article>
           <article class="step">
             <span class="step-number">06</span>
-            <h3>Optimize Performance</h3>
+            <h3>Feature Prioritisation</h3>
             <p>
-              Refined runtime paths and system integration to achieve response
-              times under approximately 50ms while preserving 95% accuracy.
+              Prioritised core features first: IMU motion tracking, pressure
+              sensing array, Bluetooth data transfer, and a real-time feedback
+              interface before adding lower-impact enhancements.
+            </p>
+          </article>
+          <article class="step">
+            <span class="step-number">07</span>
+            <h3>Prototyping</h3>
+            <p>
+              Built iterative Arduino-based hardware prototypes, evaluating sensor
+              placement, enclosure practicality, signal quality, and integration
+              with C++ signal-processing pipelines.
+            </p>
+          </article>
+          <article class="step">
+            <span class="step-number">08</span>
+            <h3>Testing</h3>
+            <p>
+              Ran movement and posture scenarios to validate detection accuracy,
+              latency, and false-positive behaviour. Sensor fusion achieved
+              approximately 95% misalignment detection accuracy.
+            </p>
+          </article>
+          <article class="step">
+            <span class="step-number">09</span>
+            <h3>Iteration</h3>
+            <p>
+              Refined filtering, thresholds, and feedback timing to achieve
+              responsive and stable guidance, with end-to-end response times under
+              approximately 50ms in final testing.
             </p>
           </article>
         </div>
