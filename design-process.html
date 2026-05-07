@@ -34,15 +34,20 @@
         <h1>Design Process</h1>
         <div class="design-notes">
           <article class="note-block">
-            <h3>Problem Clarification</h3>
+            <h3>Problem</h3>
+            <p class="note-meta">Research note: interviews + posture observation</p>
             <p>
               Users often cannot identify subtle posture errors during home
               Pilates sessions, resulting in reduced exercise quality and higher
               risk of strain without expert supervision.
             </p>
+            <div class="note-visual visual-lines" aria-hidden="true">
+              <span></span><span></span><span></span>
+            </div>
           </article>
           <article class="note-block">
             <h3>Target Users</h3>
+            <p class="note-meta">Persona draft: beginner/intermediate + coach</p>
             <p>
               Primary users were beginner-to-intermediate Pilates practitioners
               training independently. Secondary users included coaches requiring
@@ -51,6 +56,7 @@
           </article>
           <article class="note-block">
             <h3>User Needs</h3>
+            <p class="note-meta">Whiteboard synthesis: key pain points</p>
             <p>
               Key needs were immediate correction cues, comfortable form factor,
               trustworthy alignment feedback, and a simple interface that does not
@@ -59,14 +65,19 @@
           </article>
           <article class="note-block">
             <h3>Design Requirements</h3>
+            <p class="note-meta">Engineering constraints checklist</p>
             <p>
               Requirements included sub-50ms feedback, reliable Bluetooth
               communication, stable sensing under movement noise, and practical
               hardware constraints for Arduino-based prototyping.
             </p>
+            <div class="note-tags">
+              <span>IMU</span><span>Pressure Sensors</span><span>Bluetooth</span><span>Arduino</span>
+            </div>
           </article>
           <article class="note-block">
             <h3>Ideation</h3>
+            <p class="note-meta">Concept sketch comparison</p>
             <p>
               Explored alternative sensing architectures and feedback strategies,
               comparing IMU-only, pressure-only, and sensor-fusion approaches to
@@ -75,14 +86,19 @@
           </article>
           <article class="note-block">
             <h3>Feature Prioritisation</h3>
+            <p class="note-meta">Priority matrix: impact vs implementation effort</p>
             <p>
               Prioritised core features first: IMU motion tracking, pressure
               sensing array, Bluetooth data transfer, and a real-time feedback
               interface before adding lower-impact enhancements.
             </p>
+            <div class="note-visual visual-bars" aria-hidden="true">
+              <span></span><span></span><span></span><span></span>
+            </div>
           </article>
           <article class="note-block">
             <h3>Prototyping</h3>
+            <p class="note-meta">Hardware iteration log</p>
             <p>
               Built iterative Arduino-based hardware prototypes, evaluating sensor
               placement, enclosure practicality, signal quality, and integration
@@ -91,6 +107,7 @@
           </article>
           <article class="note-block">
             <h3>Testing</h3>
+            <p class="note-meta">Validation runs: latency + detection accuracy</p>
             <p>
               Ran movement and posture scenarios to validate detection accuracy,
               latency, and false-positive behaviour. Sensor fusion achieved
@@ -99,6 +116,7 @@
           </article>
           <article class="note-block">
             <h3>Iteration</h3>
+            <p class="note-meta">Tuning notes: filters, thresholds, timing</p>
             <p>
               Refined filtering, thresholds, and feedback timing to achieve
               responsive and stable guidance, with end-to-end response times under
