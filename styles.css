@@ -6,6 +6,8 @@
   --muted: #aebbd8;
   --brand: #4db6ff;
   --brand-2: #8d9bff;
+  --accent: #4af2b5;
+  --accent-dark: #0d402f;
   --border: rgba(255, 255, 255, 0.12);
   --max: 1100px;
 }
@@ -21,7 +23,10 @@ html {
 body {
   margin: 0;
   font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-  background: radial-gradient(circle at top right, #122a55, var(--bg) 60%);
+  background:
+    radial-gradient(circle at 8% 32%, rgba(74, 242, 181, 0.18), transparent 35%),
+    radial-gradient(circle at 92% 18%, rgba(32, 96, 255, 0.2), transparent 38%),
+    linear-gradient(120deg, #09182d 0%, #0a1731 45%, #132f5f 100%);
   color: var(--text);
   line-height: 1.6;
 }
@@ -89,7 +94,7 @@ body {
 }
 
 .nav a:hover {
-  color: var(--brand);
+  color: var(--accent);
 }
 
 .section {
@@ -100,23 +105,56 @@ body {
 
 .hero {
   display: grid;
-  grid-template-columns: 1fr;
-  gap: 2rem;
+  grid-template-columns: 1fr 1fr;
+  gap: 2.4rem;
   align-items: center;
-  justify-items: center;
-  min-height: 68vh;
-  padding-top: 4.5rem;
+  min-height: 72vh;
+  padding-top: 3.5rem;
   padding-bottom: 2rem;
-  text-align: center;
+  text-align: left;
 }
 
 .hero-content {
-  max-width: 760px;
+  max-width: 540px;
+}
+
+.hero-chip {
+  margin: 0;
+  width: fit-content;
+  padding: 0.45rem 0.8rem;
+  border-radius: 999px;
+  color: var(--accent);
+  background: rgba(74, 242, 181, 0.13);
+  border: 1px solid rgba(74, 242, 181, 0.3);
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.title-accent {
+  display: block;
+  color: var(--accent);
+}
+
+.hero-media {
+  border-radius: 1.6rem;
+  overflow: hidden;
+  border: 1px solid var(--border);
+  min-height: 540px;
+  background: rgba(255, 255, 255, 0.03);
+  box-shadow: 0 30px 80px rgba(4, 8, 20, 0.5);
+}
+
+.hero-image {
+  width: 100%;
+  height: 100%;
+  min-height: 540px;
+  object-fit: cover;
+  display: block;
 }
 
 .eyebrow {
   margin: 0;
-  color: var(--brand);
+  color: var(--accent);
   text-transform: uppercase;
   font-size: 0.77rem;
   letter-spacing: 0.12em;
@@ -134,8 +172,9 @@ h3 {
 h1 {
   font-size: clamp(2rem, 4.2vw, 3.9rem);
   max-width: 12ch;
-  margin-left: auto;
-  margin-right: auto;
+  margin-top: 1rem;
+  margin-left: 0;
+  margin-right: 0;
 }
 
 h2 {
@@ -145,8 +184,8 @@ h2 {
 .subtitle {
   color: var(--muted);
   max-width: 50ch;
-  margin-left: auto;
-  margin-right: auto;
+  margin-left: 0;
+  margin-right: 0;
 }
 
 .subtitle.max {
@@ -158,7 +197,7 @@ h2 {
   gap: 0.8rem;
   margin-top: 1.25rem;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: flex-start;
 }
 
 .btn {
@@ -170,13 +209,14 @@ h2 {
 }
 
 .btn-primary {
-  color: #061023;
-  background: linear-gradient(120deg, var(--brand), var(--brand-2));
+  color: #032117;
+  background: linear-gradient(120deg, #16d286, var(--accent));
 }
 
 .btn-secondary {
   color: var(--text);
-  border: 1px solid var(--border);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.06);
 }
 
 .hero-card,
@@ -268,32 +308,24 @@ h2 {
   text-align: center;
 }
 
-.mat-showcase {
-  text-align: center;
-}
-
 .mat-image {
-  width: min(100%, 900px);
-  margin-top: 1rem;
-  border-radius: 1rem;
-  border: 1px solid var(--border);
+  width: 100%;
   display: block;
-  margin-left: auto;
-  margin-right: auto;
   object-fit: cover;
 }
 
 .mat-image-fallback {
   display: none;
   color: var(--muted);
-  margin-top: 1rem;
+  margin: 0;
+  padding: 1rem;
 }
 
-.mat-showcase.missing-image .mat-image {
+.hero-media.missing-image .mat-image {
   display: none;
 }
 
-.mat-showcase.missing-image .mat-image-fallback {
+.hero-media.missing-image .mat-image-fallback {
   display: block;
 }
 
@@ -310,11 +342,45 @@ h2 {
 }
 
 @media (max-width: 940px) {
-  .hero,
   .grid.three,
   .timeline,
   .grid.two {
     grid-template-columns: 1fr;
+  }
+
+  .hero {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    text-align: center;
+    min-height: auto;
+    padding-top: 2.2rem;
+  }
+
+  .hero-content {
+    max-width: 100%;
+  }
+
+  .hero-chip {
+    margin: 0 auto;
+  }
+
+  h1 {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .subtitle {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .cta-row {
+    justify-content: center;
+  }
+
+  .hero-media,
+  .hero-image {
+    min-height: 360px;
   }
 
   .section {

@@ -3,7 +3,7 @@ const nav = document.querySelector(".nav");
 const navLinks = document.querySelectorAll(".nav a");
 const brandLink = document.querySelector("#brand-link");
 const brandLogo = document.querySelector(".brand-logo");
-const matShowcase = document.querySelector(".mat-showcase");
+const matShowcase = document.querySelector(".hero-media");
 const matImage = document.querySelector(".mat-image");
 
 if (menuButton && nav) {
