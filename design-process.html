@@ -35,100 +35,54 @@
         <div class="artifact-strip">
           <div class="artifact-card">Research Note</div>
           <div class="artifact-card">Whiteboard Synthesis</div>
-          <div class="artifact-card">Engineering Constraints Checklist</div>
+          <div class="artifact-card">Constraints Checklist</div>
           <div class="artifact-card">Priority Matrix</div>
-          <div class="artifact-card">Testing &amp; Validation Notes</div>
+          <div class="artifact-card">Validation Notes</div>
         </div>
-        <div class="design-notes">
-          <article class="note-block">
-            <h3>Problem</h3>
-            <p class="note-meta">Research note: interviews + posture observation</p>
-            <p>
-              Users often cannot identify subtle posture errors during home
-              Pilates sessions, resulting in reduced exercise quality and higher
-              risk of strain without expert supervision.
-            </p>
-            <div class="note-visual visual-lines" aria-hidden="true">
-              <span></span><span></span><span></span>
-            </div>
-          </article>
-          <article class="note-block">
-            <h3>Target Users</h3>
-            <p class="note-meta">Persona draft: beginner/intermediate + coach</p>
-            <p>
-              Primary users were beginner-to-intermediate Pilates practitioners
-              training independently. Secondary users included coaches requiring
-              objective movement and pressure data.
-            </p>
-          </article>
-          <article class="note-block">
-            <h3>User Needs</h3>
-            <p class="note-meta">Whiteboard synthesis: key pain points</p>
-            <p>
-              Key needs were immediate correction cues, comfortable form factor,
-              trustworthy alignment feedback, and a simple interface that does not
-              interrupt exercise flow.
-            </p>
-          </article>
-          <article class="note-block">
-            <h3>Design Requirements</h3>
-            <p class="note-meta">Engineering constraints checklist</p>
-            <p>
-              Requirements included sub-50ms feedback, reliable Bluetooth
-              communication, stable sensing under movement noise, and practical
-              hardware constraints for Arduino-based prototyping.
-            </p>
+        <div class="process-table card">
+          <div class="row head"><span>Section</span><span>Summary</span></div>
+          <div class="row"><span>Problem</span><span>Home users miss subtle misalignment without coaching.</span></div>
+          <div class="row"><span>Target Users</span><span>Beginner/intermediate practitioners and coaches.</span></div>
+          <div class="row"><span>User Needs</span><span>Fast correction cues, comfort, reliable guidance.</span></div>
+          <div class="row"><span>Design Requirements</span><span>&lt;50ms latency, stable BLE, robust sensing on Arduino.</span></div>
+          <div class="row"><span>Ideation</span><span>Compared IMU-only, pressure-only, and sensor fusion.</span></div>
+          <div class="row"><span>Feature Priority</span><span>IMU + pressure + Bluetooth + real-time feedback first.</span></div>
+          <div class="row"><span>Prototyping</span><span>Iterated sensor layout, firmware, and C++ processing.</span></div>
+          <div class="row"><span>Testing + Iteration</span><span>Reached ~95% detection and sub-50ms response.</span></div>
+        </div>
+
+        <div class="visual-board">
+          <article class="viz-card">
+            <h3>Whiteboard Synthesis</h3>
             <div class="note-tags">
-              <span>IMU</span><span>Pressure Sensors</span><span>Bluetooth</span><span>Arduino</span>
+              <span>Immediate cues</span><span>Comfort</span><span>Trust</span><span>Low friction UX</span>
             </div>
           </article>
-          <article class="note-block">
-            <h3>Ideation</h3>
-            <p class="note-meta">Concept sketch comparison</p>
-            <p>
-              Explored alternative sensing architectures and feedback strategies,
-              comparing IMU-only, pressure-only, and sensor-fusion approaches to
-              maximise posture detection reliability.
-            </p>
-          </article>
-          <article class="note-block">
-            <h3>Feature Prioritisation</h3>
-            <p class="note-meta">Priority matrix: impact vs implementation effort</p>
-            <p>
-              Prioritised core features first: IMU motion tracking, pressure
-              sensing array, Bluetooth data transfer, and a real-time feedback
-              interface before adding lower-impact enhancements.
-            </p>
-            <div class="note-visual visual-bars" aria-hidden="true">
-              <span></span><span></span><span></span><span></span>
+          <article class="viz-card">
+            <h3>Engineering Constraints Checklist</h3>
+            <div class="checklist">
+              <p>Latency budget &lt; 50ms</p>
+              <p>Sensor noise mitigation</p>
+              <p>Bluetooth packet stability</p>
+              <p>Arduino memory/runtime limits</p>
             </div>
           </article>
-          <article class="note-block">
-            <h3>Prototyping</h3>
-            <p class="note-meta">Hardware iteration log</p>
-            <p>
-              Built iterative Arduino-based hardware prototypes, evaluating sensor
-              placement, enclosure practicality, signal quality, and integration
-              with C++ signal-processing pipelines.
-            </p>
+          <article class="viz-card">
+            <h3>Priority Matrix</h3>
+            <div class="matrix">
+              <span class="high">IMU Fusion</span>
+              <span class="high">Pressure Array</span>
+              <span class="mid">BLE Logging</span>
+              <span class="low">Advanced Analytics</span>
+            </div>
           </article>
-          <article class="note-block">
-            <h3>Testing</h3>
-            <p class="note-meta">Validation runs: latency + detection accuracy</p>
-            <p>
-              Ran movement and posture scenarios to validate detection accuracy,
-              latency, and false-positive behaviour. Sensor fusion achieved
-              approximately 95% misalignment detection accuracy.
-            </p>
-          </article>
-          <article class="note-block">
-            <h3>Iteration</h3>
-            <p class="note-meta">Tuning notes: filters, thresholds, timing</p>
-            <p>
-              Refined filtering, thresholds, and feedback timing to achieve
-              responsive and stable guidance, with end-to-end response times under
-              approximately 50ms in final testing.
-            </p>
+          <article class="viz-card">
+            <h3>Testing / Validation Notes</h3>
+            <div class="bars">
+              <div><label>Detection Accuracy</label><span style="width:95%"></span></div>
+              <div><label>Response Speed</label><span style="width:90%"></span></div>
+              <div><label>Signal Stability</label><span style="width:88%"></span></div>
+            </div>
           </article>
         </div>
         <div class="cta-row process-back">
