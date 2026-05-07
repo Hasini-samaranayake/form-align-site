@@ -37,7 +37,7 @@ body {
   z-index: 30;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   padding: 1rem max(1.25rem, calc((100vw - var(--max)) / 2));
   backdrop-filter: blur(8px);
   background: rgba(8, 18, 37, 0.8);
@@ -75,6 +75,8 @@ body {
 
 .menu-toggle {
   display: none;
+  position: absolute;
+  right: max(1.25rem, calc((100vw - var(--max)) / 2));
   border: 1px solid var(--border);
   background: transparent;
   color: var(--text);
@@ -437,5 +439,9 @@ h2 {
 
   .menu-toggle {
     display: inline-block;
+  }
+
+  .site-header {
+    justify-content: flex-end;
   }
 }
