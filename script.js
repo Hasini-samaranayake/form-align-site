@@ -1,8 +1,6 @@
 const menuButton = document.querySelector(".menu-toggle");
 const nav = document.querySelector(".nav");
 const navLinks = document.querySelectorAll(".nav a");
-const brandLink = document.querySelector("#brand-link");
-const brandLogo = document.querySelector(".brand-logo");
 const heroLogoWrap = document.querySelector("#hero-logo-wrap");
 
 if (menuButton && nav) {
@@ -17,11 +15,32 @@ navLinks.forEach((link) => {
   });
 });
 
-if (brandLogo && brandLink) {
-  brandLogo.addEventListener("error", () => {
-    brandLink.classList.add("has-fallback");
+const setActiveNav = () => {
+  const pagePath = window.location.pathname;
+  const isDesignPage = pagePath.endsWith("/design-process.html");
+  const hash = window.location.hash || "#home";
+
+  navLinks.forEach((link) => {
+    const target = new URL(link.href);
+    const isDesignLink = target.pathname.endsWith("/design-process.html");
+    const isIndexLink = target.pathname.endsWith("/index.html");
+    const targetHash = target.hash || "#home";
+
+    const isActive = isDesignPage
+      ? isDesignLink
+      : isIndexLink && targetHash === hash;
+
+    link.classList.toggle("active", isActive);
+    if (isActive) {
+      link.setAttribute("aria-current", "page");
+    } else {
+      link.removeAttribute("aria-current");
+    }
   });
-}
+};
+
+window.addEventListener("hashchange", setActiveNav);
+setActiveNav();
 
 if (heroLogoWrap) {
   const setLogoPop = () => {

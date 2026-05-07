@@ -99,6 +99,11 @@ body {
   color: var(--accent);
 }
 
+.nav a.active {
+  color: var(--accent);
+  font-weight: 600;
+}
+
 .section {
   width: min(var(--max), 92vw);
   margin: 0 auto;
@@ -536,6 +541,23 @@ h2 {
 
   .artifact-strip {
     grid-template-columns: 1fr;
+  }
+
+  .design-notes {
+    gap: 0.7rem;
+  }
+
+  .note-block {
+    padding: 0.75rem 0.75rem 0.8rem;
+  }
+
+  .note-block h3 {
+    font-size: 1rem;
+  }
+
+  .note-meta {
+    font-size: 0.78rem;
+    margin-bottom: 0.4rem !important;
   }
 
   .nav {
