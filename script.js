@@ -5,6 +5,7 @@ const brandLink = document.querySelector("#brand-link");
 const brandLogo = document.querySelector(".brand-logo");
 const matShowcase = document.querySelector(".hero-media");
 const matImage = document.querySelector(".mat-image");
+const heroLogoWrap = document.querySelector("#hero-logo-wrap");
 
 if (menuButton && nav) {
   menuButton.addEventListener("click", () => {
@@ -28,4 +29,17 @@ if (matImage && matShowcase) {
   matImage.addEventListener("error", () => {
     matShowcase.classList.add("missing-image");
   });
+}
+
+if (heroLogoWrap) {
+  const setLogoPop = () => {
+    if (window.scrollY > 24) {
+      heroLogoWrap.classList.add("popped");
+    } else {
+      heroLogoWrap.classList.remove("popped");
+    }
+  };
+
+  window.addEventListener("scroll", setLogoPop, { passive: true });
+  setLogoPop();
 }
