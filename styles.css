@@ -350,14 +350,6 @@ h2 {
   color: var(--muted);
 }
 
-.note-meta {
-  margin-bottom: 0.55rem !important;
-  font-size: 0.85rem;
-  color: #74ffd0 !important;
-  font-weight: 600;
-  letter-spacing: 0.01em;
-}
-
 .note-tags {
   margin-top: 0.6rem;
   display: flex;
@@ -534,11 +526,6 @@ h2 {
 
   .note-block h3 {
     font-size: 1rem;
-  }
-
-  .note-meta {
-    font-size: 0.78rem;
-    margin-bottom: 0.4rem !important;
   }
 
   .nav {
