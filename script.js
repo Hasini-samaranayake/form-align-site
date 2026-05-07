@@ -1,6 +1,8 @@
 const menuButton = document.querySelector(".menu-toggle");
 const nav = document.querySelector(".nav");
 const navLinks = document.querySelectorAll(".nav a");
+const brandLink = document.querySelector("#brand-link");
+const brandLogo = document.querySelector(".brand-logo");
 
 if (menuButton && nav) {
   menuButton.addEventListener("click", () => {
@@ -13,3 +15,9 @@ navLinks.forEach((link) => {
     nav?.classList.remove("open");
   });
 });
+
+if (brandLogo && brandLink) {
+  brandLogo.addEventListener("error", () => {
+    brandLink.classList.add("has-fallback");
+  });
+}

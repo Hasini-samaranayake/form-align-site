@@ -49,15 +49,23 @@ body {
   letter-spacing: 0.02em;
 }
 
-.brand-mark {
-  width: 2rem;
-  height: 2rem;
-  border-radius: 0.55rem;
-  display: grid;
-  place-items: center;
-  color: #061023;
-  font-weight: 800;
-  background: linear-gradient(120deg, var(--brand), var(--brand-2));
+.brand-logo {
+  height: 2.15rem;
+  width: auto;
+  display: block;
+}
+
+.brand-fallback {
+  display: none;
+  font-weight: 700;
+}
+
+.brand.has-fallback .brand-fallback {
+  display: inline;
+}
+
+.brand.has-fallback .brand-logo {
+  display: none;
 }
 
 .menu-toggle {
@@ -241,6 +249,10 @@ h2 {
 
 .contact {
   text-align: center;
+}
+
+.process-back {
+  margin-top: 1rem;
 }
 
 .site-footer {

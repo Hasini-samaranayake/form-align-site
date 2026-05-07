@@ -18,17 +18,21 @@
   </head>
   <body>
     <header class="site-header">
-      <a href="#home" class="brand">
-        <span class="brand-mark" aria-hidden="true">FA</span>
-        <span>Form Align</span>
+      <a href="./index.html#home" class="brand" id="brand-link">
+        <img
+          class="brand-logo"
+          src="./assets/form-align-logo.png"
+          alt="Form Align logo"
+        />
+        <span class="brand-fallback">Form Align</span>
       </a>
       <button class="menu-toggle" aria-label="Toggle navigation">Menu</button>
       <nav class="nav">
-        <a href="#home">Home</a>
-        <a href="#technology">Technology</a>
-        <a href="#design-process">Design Process</a>
-        <a href="#results">Results</a>
-        <a href="#contact">Contact</a>
+        <a href="./index.html#home">Home</a>
+        <a href="./index.html#technology">Technology</a>
+        <a href="./design-process.html">Design Process</a>
+        <a href="./index.html#results">Results</a>
+        <a href="./index.html#contact">Contact</a>
       </nav>
     </header>
 
@@ -43,7 +47,7 @@
           </p>
           <div class="cta-row">
             <a href="#technology" class="btn btn-primary">Explore Product</a>
-            <a href="#design-process" class="btn btn-secondary">View Design Process</a>
+            <a href="./design-process.html" class="btn btn-secondary">View Design Process</a>
           </div>
         </div>
         <div class="hero-card">
@@ -80,65 +84,6 @@
             <p>
               Motion and force features are fused to classify posture quality and
               trigger immediate correction cues while users train.
-            </p>
-          </article>
-        </div>
-      </section>
-
-      <section id="design-process" class="section">
-        <p class="eyebrow">Engineering Portfolio Tab</p>
-        <h2>Design Process</h2>
-        <p class="subtitle max">
-          This project followed an iterative engineering design process to move
-          from concept to validated real-time biomechanical system.
-        </p>
-        <div class="timeline">
-          <article class="step">
-            <span class="step-number">01</span>
-            <h3>Define Problem</h3>
-            <p>
-              Identified a key Pilates challenge: users struggle to self-correct
-              subtle posture errors without an instructor.
-            </p>
-          </article>
-          <article class="step">
-            <span class="step-number">02</span>
-            <h3>Set Requirements</h3>
-            <p>
-              Established design targets for high detection accuracy, low latency,
-              stable feedback, and practical embedded implementation.
-            </p>
-          </article>
-          <article class="step">
-            <span class="step-number">03</span>
-            <h3>Prototype Hardware</h3>
-            <p>
-              Built multiple mat prototypes with varied IMU placement and force
-              sensor layouts to compare coverage, reliability, and signal quality.
-            </p>
-          </article>
-          <article class="step">
-            <span class="step-number">04</span>
-            <h3>Develop Algorithms</h3>
-            <p>
-              Implemented low-latency C++ filtering and feature extraction to
-              mitigate noise and produce robust motion-force indicators.
-            </p>
-          </article>
-          <article class="step">
-            <span class="step-number">05</span>
-            <h3>Validate &amp; Iterate</h3>
-            <p>
-              Tested against real movement scenarios, measured false detections,
-              and iteratively tuned thresholds and fusion logic.
-            </p>
-          </article>
-          <article class="step">
-            <span class="step-number">06</span>
-            <h3>Optimize Performance</h3>
-            <p>
-              Refined runtime paths and system integration to achieve response
-              times under approximately 50ms while preserving 95% accuracy.
             </p>
           </article>
         </div>

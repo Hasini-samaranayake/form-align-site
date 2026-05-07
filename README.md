@@ -26,3 +26,4 @@ This project is static and can be deployed from the `main` branch root:
 - Brand name and text: `index.html`
 - Theme and layout: `styles.css`
 - Mobile menu behavior: `script.js`
+- Logo image file: `assets/form-align-logo.png` (add your attached logo here)

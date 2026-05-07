@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form Align | Design Process</title>
+    <meta
+      name="description"
+      content="Engineering design process behind the Form Align adaptive Pilates mat."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a href="./index.html#home" class="brand" id="brand-link">
+        <img
+          class="brand-logo"
+          src="./assets/form-align-logo.png"
+          alt="Form Align logo"
+        />
+        <span class="brand-fallback">Form Align</span>
+      </a>
+      <button class="menu-toggle" aria-label="Toggle navigation">Menu</button>
+      <nav class="nav">
+        <a href="./index.html#home">Home</a>
+        <a href="./index.html#technology">Technology</a>
+        <a href="./design-process.html">Design Process</a>
+        <a href="./index.html#results">Results</a>
+        <a href="./index.html#contact">Contact</a>
+      </nav>
+    </header>
+
+    <main>
+      <section id="design-process" class="section">
+        <p class="eyebrow">Engineering Portfolio Tab</p>
+        <h1>Design Process</h1>
+        <p class="subtitle max">
+          This project followed an iterative engineering design process to move
+          from concept to validated real-time biomechanical system.
+        </p>
+        <div class="timeline">
+          <article class="step">
+            <span class="step-number">01</span>
+            <h3>Define Problem</h3>
+            <p>
+              Identified a key Pilates challenge: users struggle to self-correct
+              subtle posture errors without an instructor.
+            </p>
+          </article>
+          <article class="step">
+            <span class="step-number">02</span>
+            <h3>Set Requirements</h3>
+            <p>
+              Established design targets for high detection accuracy, low latency,
+              stable feedback, and practical embedded implementation.
+            </p>
+          </article>
+          <article class="step">
+            <span class="step-number">03</span>
+            <h3>Prototype Hardware</h3>
+            <p>
+              Built multiple mat prototypes with varied IMU placement and force
+              sensor layouts to compare coverage, reliability, and signal quality.
+            </p>
+          </article>
+          <article class="step">
+            <span class="step-number">04</span>
+            <h3>Develop Algorithms</h3>
+            <p>
+              Implemented low-latency C++ filtering and feature extraction to
+              mitigate noise and produce robust motion-force indicators.
+            </p>
+          </article>
+          <article class="step">
+            <span class="step-number">05</span>
+            <h3>Validate &amp; Iterate</h3>
+            <p>
+              Tested against real movement scenarios, measured false detections,
+              and iteratively tuned thresholds and fusion logic.
+            </p>
+          </article>
+          <article class="step">
+            <span class="step-number">06</span>
+            <h3>Optimize Performance</h3>
+            <p>
+              Refined runtime paths and system integration to achieve response
+              times under approximately 50ms while preserving 95% accuracy.
+            </p>
+          </article>
+        </div>
+        <div class="cta-row process-back">
+          <a href="./index.html" class="btn btn-primary">Back to Home</a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>&copy; 2026 Form Align. Adaptive Pilates Mat.</p>
+    </footer>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
