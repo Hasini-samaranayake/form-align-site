@@ -318,6 +318,29 @@ h2 {
   color: var(--brand);
 }
 
+.design-notes {
+  margin-top: 1.25rem;
+  display: grid;
+  gap: 0.9rem;
+}
+
+.note-block {
+  border-left: 3px solid rgba(74, 242, 181, 0.45);
+  padding: 0.85rem 0 0.85rem 1rem;
+  background: rgba(255, 255, 255, 0.02);
+  border-radius: 0.65rem;
+}
+
+.note-block h3 {
+  margin: 0 0 0.3rem;
+  font-size: 1.1rem;
+}
+
+.note-block p {
+  margin: 0;
+  color: var(--muted);
+}
+
 .metric {
   text-align: center;
 }
@@ -358,7 +381,6 @@ h2 {
 
 @media (max-width: 940px) {
   .grid.three,
-  .timeline,
   .grid.two {
     grid-template-columns: 1fr;
   }
