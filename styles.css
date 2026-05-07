@@ -124,6 +124,9 @@ body {
 .hero-content {
   max-width: 540px;
   order: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 }
 
 .hero-logo-wrap {
@@ -137,8 +140,8 @@ body {
   box-shadow: 0 6px 14px rgba(0, 0, 0, 0.28);
   display: grid;
   place-items: center;
-  margin-left: 0;
-  margin-right: 0;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
   transition: transform 0.35s ease, box-shadow 0.35s ease;
 }
 
@@ -155,7 +158,7 @@ body {
 }
 
 .hero-chip {
-  margin: 0;
+  margin: 0 !important;
   width: fit-content;
   padding: 0.45rem 0.8rem;
   border-radius: 999px;
@@ -420,15 +423,16 @@ h2 {
 
   .hero-content {
     max-width: 100%;
+    align-items: flex-start;
   }
 
   .hero-chip {
-    margin: 0;
+    margin: 0 !important;
   }
 
   .hero-logo-wrap {
-    margin-left: 0;
-    margin-right: 0;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
   }
 
   h1 {
