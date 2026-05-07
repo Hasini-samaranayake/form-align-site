@@ -342,21 +342,6 @@ h2 {
   object-fit: cover;
 }
 
-.mat-image-fallback {
-  display: none;
-  color: var(--muted);
-  margin: 0;
-  padding: 1rem;
-}
-
-.hero-media.missing-image .mat-image {
-  display: none;
-}
-
-.hero-media.missing-image .mat-image-fallback {
-  display: block;
-}
-
 .process-back {
   margin-top: 1rem;
 }

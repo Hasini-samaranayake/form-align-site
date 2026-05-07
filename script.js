@@ -3,8 +3,6 @@ const nav = document.querySelector(".nav");
 const navLinks = document.querySelectorAll(".nav a");
 const brandLink = document.querySelector("#brand-link");
 const brandLogo = document.querySelector(".brand-logo");
-const matShowcase = document.querySelector(".hero-media");
-const matImage = document.querySelector(".mat-image");
 const heroLogoWrap = document.querySelector("#hero-logo-wrap");
 
 if (menuButton && nav) {
@@ -22,12 +20,6 @@ navLinks.forEach((link) => {
 if (brandLogo && brandLink) {
   brandLogo.addEventListener("error", () => {
     brandLink.classList.add("has-fallback");
-  });
-}
-
-if (matImage && matShowcase) {
-  matImage.addEventListener("error", () => {
-    matShowcase.classList.add("missing-image");
   });
 }
 
