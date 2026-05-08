@@ -463,17 +463,16 @@ h2 {
 }
 
 .prototype-image {
-  width: min(100%, 320px);
-  height: auto;
+  width: 320px;
+  height: 320px;
+  max-width: 100%;
   display: block;
   justify-self: start;
-  aspect-ratio: 1 / 1;
   border-radius: 0.8rem;
   border: 1px solid rgba(255, 255, 255, 0.16);
   margin: 0;
-  max-height: none;
   object-fit: cover;
-  object-position: 50% 10%;
+  object-position: center;
   box-shadow: 0 10px 24px rgba(0, 0, 0, 0.24);
 }
 
