@@ -565,6 +565,10 @@ h2 {
     align-items: flex-start;
   }
 
+  #home .hero-content {
+    align-items: center;
+  }
+
   .hero-chip {
     margin: 0 !important;
   }
