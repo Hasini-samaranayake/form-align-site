@@ -450,6 +450,27 @@ h2 {
   color: var(--muted);
 }
 
+.prototype-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(260px, 420px);
+  gap: 1rem;
+  align-items: start;
+}
+
+.prototype-stages {
+  display: grid;
+  gap: 0.7rem;
+}
+
+.prototype-image {
+  width: 100%;
+  display: block;
+  border-radius: 0.8rem;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  margin: 0;
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.24);
+}
+
 
 .note-block {
   border: 1px solid var(--border);
@@ -590,6 +611,10 @@ h2 {
 
   .dp-grid.two,
   .dp-grid.three {
+    grid-template-columns: 1fr;
+  }
+
+  .prototype-layout {
     grid-template-columns: 1fr;
   }
 
