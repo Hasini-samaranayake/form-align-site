@@ -468,6 +468,8 @@ h2 {
   border-radius: 0.8rem;
   border: 1px solid rgba(255, 255, 255, 0.16);
   margin: 0;
+  max-height: 230px;
+  object-fit: cover;
   box-shadow: 0 10px 24px rgba(0, 0, 0, 0.24);
 }
 
@@ -570,6 +572,16 @@ h2 {
   .hero-logo-wrap {
     margin-left: 0 !important;
     margin-right: 0 !important;
+  }
+
+  #home .hero-logo-wrap {
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+
+  #home .hero-chip {
+    margin-left: auto !important;
+    margin-right: auto !important;
   }
 
   h1 {
