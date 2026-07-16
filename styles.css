@@ -599,15 +599,19 @@ section.tight { padding: clamp(3rem, 6vw, 4.5rem) 0; }
   position: relative;
   overflow: hidden;
 }
+/* Weight rocks between front and back zone pairs like a rep:
+   load (hold) → shift → load the other end (hold). Back pair runs in
+   antiphase via negative delays; small per-side offsets keep it human. */
 .zone-blob {
   position: absolute;
   border-radius: 50%;
   background: radial-gradient(circle, rgba(201, 142, 92, 0.6), rgba(201, 142, 92, 0));
-  animation: blob-pulse 3.4s ease-in-out infinite;
+  animation: zone-shift 5.2s cubic-bezier(0.55, 0.05, 0.3, 1) infinite;
 }
-@keyframes blob-pulse {
-  0%, 100% { transform: scale(0.85); opacity: 0.65; }
-  50% { transform: scale(1.12); opacity: 1; }
+@keyframes zone-shift {
+  0%, 16% { transform: scale(1.18); opacity: 1; }      /* loaded — hold the position */
+  42%, 68% { transform: scale(0.55); opacity: 0.3; }   /* unloaded — weight is on the other pair */
+  94%, 100% { transform: scale(1.18); opacity: 1; }
 }
 .zone-caption {
   text-align: center;
