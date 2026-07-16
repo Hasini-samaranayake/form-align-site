@@ -3,115 +3,252 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Form Align | Smart Pilates Mat</title>
+    <title>FormAlign — The pilates mat that corrects your form in real time</title>
     <meta
       name="description"
-      content="Form Align is an adaptive Pilates mat with real-time biomechanical feedback powered by IMU motion tracking and force sensing."
+      content="FormAlign is a pressure-sensing pilates mat that reads your weight distribution and corrects your form in real time — like a trainer's eye, built into the mat."
     />
+    <link rel="icon" type="image/png" href="./assets/form-align-logo.png" />
+    <meta property="og:title" content="FormAlign — Real-time form correction, built into the mat" />
+    <meta property="og:description" content="A pressure-sensing pilates mat that reads your weight distribution and cues you the moment you drift off target." />
+    <meta property="og:image" content="https://www.formalign.fit/assets/mat-studio.jpg" />
+    <meta property="og:url" content="https://www.formalign.fit/" />
+    <meta property="og:type" content="website" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..700;1,9..144,400..700&family=Inter:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="./styles.css?v=20260508-2" />
+    <link rel="stylesheet" href="./styles.css?v=20260716-2" />
   </head>
   <body>
     <header class="site-header">
-      <button class="menu-toggle" aria-label="Toggle navigation">Menu</button>
-      <nav class="nav">
-        <a href="./index.html#home">Home</a>
-        <a href="./index.html#technology">Technology</a>
-        <a href="./design-process.html">Design Process</a>
-        <a href="./index.html#results">Results</a>
-        <a href="./index.html#contact">Contact</a>
+      <nav class="nav wrap" aria-label="Main">
+        <a class="brand" href="./index.html">
+          <img src="./assets/form-align-logo.png" alt="" />
+          FormAlign
+        </a>
+        <button class="nav-toggle" aria-expanded="false" aria-label="Open menu">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+        </button>
+        <ul class="nav-links">
+          <li><a href="./index.html" aria-current="page">Home</a></li>
+          <li><a href="./how-it-works.html">How It Works</a></li>
+          <li><a href="./progress.html">Your Progress</a></li>
+          <li><a href="./about.html">About</a></li>
+          <li><a class="btn btn-primary btn-nav" href="./early-access.html">Get Early Access</a></li>
+        </ul>
       </nav>
     </header>
 
     <main>
-      <section id="home" class="hero section">
-        <div class="hero-content">
-          <div class="hero-logo-wrap" id="hero-logo-wrap">
-            <img
-              class="hero-logo"
-              src="./assets/form-align-logo.png"
-              alt="Form Align logo"
-            />
+      <!-- Hero -->
+      <section class="hero">
+        <div class="wrap hero-grid">
+          <div>
+            <h1>Your mat can’t tell you if your weight is in the right place. <em>Ours can.</em></h1>
+            <p class="lede">
+              FormAlign senses how your weight is distributed across the mat and corrects
+              you in real time — the benefit of a trainer’s eye, without a trainer in the room.
+            </p>
+            <div class="hero-ctas">
+              <a class="btn btn-primary btn-lg" href="./early-access.html">Get Early Access <span class="arrow">→</span></a>
+              <a class="btn btn-ghost btn-lg" href="./how-it-works.html">See how it works</a>
+            </div>
+            <p class="hero-note"><span class="dot"></span> Working prototype, built and tested by the founder</p>
           </div>
-          <p class="hero-chip">Smart Fitness Technology</p>
-          <h1>Precision in Every Pose.</h1>
-          <p class="subtitle">
-            Pressure-sensing technology meets premium design. Experience real-time
-            posture feedback and adaptive biomechanics that evolves as you
-            exercise.
-          </p>
-          <div class="cta-row">
-            <a href="#technology" class="btn btn-primary">Explore Features</a>
-            <a href="./design-process.html" class="btn btn-secondary">View Design Process</a>
+          <div class="hero-visual">
+            <div class="hero-photo">
+              <!-- Swap in your best product/lifestyle shot here -->
+              <img src="./assets/mat-studio.jpg" alt="The FormAlign smart pilates mat on a studio floor" />
+            </div>
+            <div class="feedback-card" aria-hidden="true">
+              <div class="fc-title">
+                Live feedback
+                <span class="fc-status good">Good form</span>
+              </div>
+              <div class="fc-bar-label"><span>Front load</span><span class="fc-value">80%</span></div>
+              <div class="fc-bar">
+                <div class="fc-bar-fill" style="width: 80%"></div>
+                <div class="fc-target" style="left: 80%"></div>
+              </div>
+              <p class="fc-cue">Good form — hold it there</p>
+            </div>
           </div>
         </div>
-        <div class="hero-media">
-          <img
-            class="hero-image mat-image"
-            src="./assets/picwish_answer_image.png"
-            alt="Form Align smart Pilates mat prototype"
-          />
+      </section>
+
+      <!-- Problem -->
+      <section class="band tight">
+        <div class="wrap split">
+          <div class="reveal">
+            <p class="eyebrow">The problem</p>
+            <h2>Practicing alone means practicing unchecked.</h2>
+          </div>
+          <div class="reveal reveal-d1">
+            <p>
+              In a lunge, a plank, or a bridge, where your weight sits determines whether the
+              exercise builds you up or quietly wears you down. Poor weight distribution reduces
+              effectiveness and drives overuse injury — and at home, there’s no instructor to
+              catch it before it becomes a habit.
+            </p>
+            <p style="margin-top: 1rem;">
+              Whether you want a correction cue in the moment or just the data over time,
+              FormAlign keeps track.
+            </p>
+          </div>
         </div>
       </section>
 
-      <section id="technology" class="section panel">
-        <p class="eyebrow">Product Overview</p>
-        <h2>Integrated Intelligence</h2>
-        <div class="grid three">
-          <article class="card">
-            <h3>Sensor Fusion</h3>
-            <p>
-              IMU-based motion tracking combines with distributed force-sensing
-              arrays to capture full-body movement and pressure profiles.
-            </p>
-          </article>
-          <article class="card">
-            <h3>Signal Processing</h3>
-            <p>
-              Real-time C++ pipelines clean and transform noisy sensor streams to
-              produce stable biomechanical indicators at low latency.
-            </p>
-          </article>
-          <article class="card">
-            <h3>Feedback Engine</h3>
-            <p>
-              Motion and force features are fused to classify posture quality and
-              trigger immediate correction cues while users train.
-            </p>
-          </article>
+      <!-- How it works (condensed) -->
+      <section>
+        <div class="wrap">
+          <div class="section-head reveal">
+            <p class="eyebrow">How it works</p>
+            <h2>A trainer’s eye, translated into pressure.</h2>
+          </div>
+          <div class="steps">
+            <div class="step reveal">
+              <div class="num">1</div>
+              <h3>Step on the mat</h3>
+              <p>Embedded pressure sensors read how your weight meets the mat — feet, hands, knees.</p>
+            </div>
+            <div class="step reveal reveal-d1">
+              <div class="num">2</div>
+              <h3>It learns your baseline</h3>
+              <p>A quick calibration tunes the mat to you and your setup at the start of each session.</p>
+            </div>
+            <div class="step reveal reveal-d2">
+              <div class="num">3</div>
+              <h3>It reads every shift</h3>
+              <p>As you move, the mat tracks your weight distribution against the target for that exercise.</p>
+            </div>
+            <div class="step reveal reveal-d3">
+              <div class="num">4</div>
+              <h3>It cues you instantly</h3>
+              <p>Drift off target and the mat tells you — gentle, immediate, and within the rep.</p>
+            </div>
+          </div>
+          <div style="margin-top: 2.5rem;" class="reveal">
+            <a class="btn btn-ghost" href="./how-it-works.html">The full picture, including the AI roadmap <span class="arrow">→</span></a>
+          </div>
         </div>
       </section>
 
-      <section id="results" class="section panel">
-        <p class="eyebrow">Outcomes</p>
-        <h2>Built for Measurable Impact</h2>
-        <div class="grid two">
-          <article class="card metric">
-            <p class="metric-value">95%</p>
-            <p class="metric-label">Posture Misalignment Detection</p>
-          </article>
-          <article class="card metric">
-            <p class="metric-value">&lt;50ms</p>
-            <p class="metric-label">End-to-End Feedback Latency</p>
-          </article>
+      <!-- Two audiences -->
+      <section class="band">
+        <div class="wrap">
+          <div class="section-head reveal">
+            <p class="eyebrow">Two ways to use it</p>
+            <h2>Coaching when you need it. Proof when you don’t.</h2>
+          </div>
+          <div class="audience-grid">
+            <div class="audience-card reveal">
+              <div class="icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v3M12 18v3M3 12h3M18 12h3"/><circle cx="12" cy="12" r="5"/></svg>
+              </div>
+              <h3>Real-time correction</h3>
+              <p>
+                For anyone practicing solo who wants form checked as they move — beginners
+                building safe habits, and home practitioners who miss the instructor’s eye.
+              </p>
+              <a href="./how-it-works.html">How the feedback loop works →</a>
+            </div>
+            <div class="audience-card teal reveal reveal-d1">
+              <div class="icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19V10M10 19V5M16 19v-8M21 19H3"/></svg>
+              </div>
+              <h3>Objective progress data</h3>
+              <p>
+                For experienced practitioners and recovery users who don’t need much coaching —
+                just clear, session-by-session evidence that balance and symmetry are improving.
+              </p>
+              <a href="./progress.html">See the progress dashboard →</a>
+            </div>
+          </div>
         </div>
       </section>
 
-      <section id="contact" class="section contact">
-        <h2>Ready to See Form Align in Action?</h2>
-        <a class="btn btn-primary" href="mailto:hello@hasini.studio">Contact</a>
+      <!-- Honesty / proof -->
+      <section>
+        <div class="wrap split">
+          <div class="proto-frame reveal">
+            <span class="proto-tag">The actual prototype, today</span>
+            <img src="./assets/prototype-photo.jpg" alt="The current FormAlign working prototype: sensing electronics mounted on a pilates mat" />
+          </div>
+          <div class="reveal reveal-d1">
+            <p class="eyebrow">Where we are</p>
+            <h2>Built by hand. Working today.</h2>
+            <p style="margin-top: 1rem;">
+              FormAlign is a founder-led company at the prototype stage — and we’d rather show
+              you the real hardware than a render of something that doesn’t exist yet.
+            </p>
+            <ul class="check-list">
+              <li><span class="check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 7"/></svg></span> The sensing and feedback loop works — tested on real exercises</li>
+              <li><span class="check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 7"/></svg></span> Feedback lands fast enough to correct you mid-rep, no phone required</li>
+              <li><span class="check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 7"/></svg></span> Next: a fully embedded, wireless mat and companion app</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- Final CTA -->
+      <section class="tight">
+        <div class="wrap">
+          <div class="cta-band reveal">
+            <h2>Be first on the mat.</h2>
+            <p>
+              Join the early-access list for first purchase access and a real say in what we
+              build next. No spam — just honest progress updates from the founder.
+            </p>
+            <a class="btn btn-primary btn-lg" href="./early-access.html">Get Early Access <span class="arrow">→</span></a>
+          </div>
+        </div>
       </section>
     </main>
 
     <footer class="site-footer">
-      <p>&copy; 2026 Form Align. Adaptive Pilates Mat.</p>
+      <div class="wrap">
+        <div class="footer-grid">
+          <div>
+            <a class="footer-brand" href="./index.html">
+              <img src="./assets/form-align-logo.png" alt="" />
+              FormAlign
+            </a>
+            <p>
+              A pressure-sensing pilates mat that reads your weight distribution and coaches
+              your form in real time.
+            </p>
+            <p class="footer-hiring">
+              We’re looking for a technical co-founder in embedded &amp; AI fitness hardware.
+              <a href="mailto:hello@formalign.fit?subject=Technical%20co-founder">Say hello</a>
+            </p>
+          </div>
+          <div class="footer-col">
+            <h4>Explore</h4>
+            <ul>
+              <li><a href="./how-it-works.html">How It Works</a></li>
+              <li><a href="./progress.html">Your Progress</a></li>
+              <li><a href="./about.html">About</a></li>
+              <li><a href="./early-access.html">Get Early Access</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>Contact</h4>
+            <ul>
+              <li><a href="mailto:hello@formalign.fit">hello@formalign.fit</a></li>
+              <li><a href="mailto:press@formalign.fit">Press inquiries</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <span>© <span class="year"></span> FormAlign. All rights reserved.</span>
+          <a href="./privacy.html">Privacy Policy</a>
+        </div>
+      </div>
     </footer>
 
-    <script src="./script.js"></script>
+    <script src="./script.js?v=20260716-2" defer></script>
   </body>
 </html>
