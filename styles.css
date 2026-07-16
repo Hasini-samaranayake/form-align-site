@@ -275,11 +275,11 @@ section.tight { padding: clamp(3rem, 6vw, 4.5rem) 0; }
   object-fit: cover;
 }
 
-/* live feedback demo card, overlaid on hero photo */
+/* live feedback demo card, straddling the hero photo's bottom-right corner */
 .feedback-card {
   position: absolute;
-  left: -1.75rem;
-  bottom: 2rem;
+  right: -1.25rem;
+  bottom: -1.75rem;
   background: var(--card);
   border-radius: var(--radius-sm);
   box-shadow: var(--shadow-md);
@@ -968,7 +968,7 @@ section.tight { padding: clamp(3rem, 6vw, 4.5rem) 0; }
   .hiw-block.flip .hiw-visual { order: 0; }
   .dc-6, .dc-4, .dc-8 { grid-column: span 12; }
   .hero-photo { aspect-ratio: 4 / 3; }
-  .feedback-card { left: 1rem; bottom: 1rem; }
+  .feedback-card { right: 0.75rem; bottom: -1.25rem; }
 }
 
 @media (max-width: 720px) {
