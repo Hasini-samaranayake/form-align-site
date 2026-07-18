@@ -278,8 +278,8 @@ section.tight { padding: clamp(3rem, 6vw, 4.5rem) 0; }
 /* live feedback demo badge — white circle straddling the photo's bottom-right corner */
 .feedback-card {
   position: absolute;
-  right: -1.25rem;
-  bottom: -4rem;
+  right: -2.5rem;
+  bottom: -5.5rem;
   background: var(--card);
   border-radius: 50%;
   box-shadow: var(--shadow-md);
@@ -994,7 +994,7 @@ section.tight { padding: clamp(3rem, 6vw, 4.5rem) 0; }
   .hiw-block.flip .hiw-visual { order: 0; }
   .dc-6, .dc-4, .dc-8 { grid-column: span 12; }
   .hero-photo { aspect-ratio: 4 / 3; }
-  .feedback-card { right: 0; bottom: -3rem; width: min(220px, 70%); padding: 1.25rem; }
+  .feedback-card { right: 0; bottom: -3.75rem; width: min(220px, 70%); padding: 1.25rem; }
 }
 
 @media (max-width: 720px) {
