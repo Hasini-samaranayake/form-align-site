@@ -279,13 +279,13 @@ section.tight { padding: clamp(3rem, 6vw, 4.5rem) 0; }
 .feedback-card {
   position: absolute;
   right: -2.5rem;
-  bottom: -5.5rem;
+  bottom: -4.5rem;
   background: var(--card);
   border-radius: 50%;
   box-shadow: var(--shadow-md);
-  width: min(250px, 74%);
+  width: min(215px, 66%);
   aspect-ratio: 1 / 1;
-  padding: 1.5rem;
+  padding: 1.1rem;
   border: 1px solid var(--line);
   display: flex;
   flex-direction: column;
@@ -294,7 +294,7 @@ section.tight { padding: clamp(3rem, 6vw, 4.5rem) 0; }
   text-align: center;
 }
 .feedback-card .fc-title {
-  font-size: 0.7rem;
+  font-size: 0.64rem;
   font-weight: 650;
   letter-spacing: 0.1em;
   text-transform: uppercase;
@@ -306,7 +306,7 @@ section.tight { padding: clamp(3rem, 6vw, 4.5rem) 0; }
   gap: 0.5rem;
 }
 .fc-status {
-  font-size: 0.75rem;
+  font-size: 0.7rem;
   font-weight: 650;
   padding: 0.18rem 0.6rem;
   border-radius: 999px;
@@ -320,11 +320,11 @@ section.tight { padding: clamp(3rem, 6vw, 4.5rem) 0; }
 .fc-bar-label {
   display: flex;
   justify-content: space-between;
-  font-size: 0.78rem;
+  font-size: 0.72rem;
   color: var(--ink-soft);
   font-weight: 550;
   margin-bottom: 0.35rem;
-  width: min(160px, 100%);
+  width: min(140px, 100%);
 }
 .fc-bar {
   height: 10px;
@@ -332,7 +332,7 @@ section.tight { padding: clamp(3rem, 6vw, 4.5rem) 0; }
   background: var(--paper-warm);
   overflow: hidden;
   position: relative;
-  width: min(160px, 100%);
+  width: min(140px, 100%);
 }
 .fc-bar-fill {
   height: 100%;
@@ -351,12 +351,12 @@ section.tight { padding: clamp(3rem, 6vw, 4.5rem) 0; }
   border-radius: 2px;
 }
 .fc-cue {
-  margin-top: 0.65rem;
-  font-size: 0.85rem;
+  margin-top: 0.55rem;
+  font-size: 0.76rem;
   color: var(--ink-soft);
-  min-height: 2.8em;
+  min-height: 2.6em;
   font-weight: 500;
-  max-width: 170px;
+  max-width: 150px;
   display: flex;
   align-items: flex-start;
   justify-content: center;
@@ -994,7 +994,7 @@ section.tight { padding: clamp(3rem, 6vw, 4.5rem) 0; }
   .hiw-block.flip .hiw-visual { order: 0; }
   .dc-6, .dc-4, .dc-8 { grid-column: span 12; }
   .hero-photo { aspect-ratio: 4 / 3; }
-  .feedback-card { right: 0; bottom: -3.75rem; width: min(220px, 70%); padding: 1.25rem; }
+  .feedback-card { right: 0; bottom: -3.25rem; width: min(190px, 60%); padding: 1rem; }
 }
 
 @media (max-width: 720px) {
