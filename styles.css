@@ -229,8 +229,8 @@ section.tight { padding: clamp(3rem, 6vw, 4.5rem) 0; }
 
 .hero-grid {
   display: grid;
-  grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr);
-  gap: clamp(2.5rem, 5vw, 4.5rem);
+  grid-template-columns: minmax(0, 0.92fr) minmax(0, 1.08fr);
+  gap: clamp(2.5rem, 5vw, 4rem);
   align-items: center;
 }
 
