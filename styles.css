@@ -795,7 +795,8 @@ section.tight { padding: clamp(3rem, 6vw, 4.5rem) 0; }
 .about-photo {
   grid-area: photo;
   align-self: end;
-  width: 100%;
+  justify-self: start;
+  width: 80%;
   height: auto;
   border-radius: var(--radius);
   box-shadow: var(--shadow-sm);
