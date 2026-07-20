@@ -772,7 +772,7 @@ section.tight { padding: clamp(3rem, 6vw, 4.5rem) 0; }
 
 .about-grid {
   display: grid;
-  grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+  grid-template-columns: minmax(0, 1.05fr) minmax(0, 1fr);
   gap: clamp(2.5rem, 5vw, 4.5rem);
   align-items: start;
 }
