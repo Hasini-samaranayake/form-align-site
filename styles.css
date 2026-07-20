@@ -772,7 +772,7 @@ section.tight { padding: clamp(3rem, 6vw, 4.5rem) 0; }
 
 .about-grid {
   display: grid;
-  grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr);
+  grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr);
   grid-template-areas:
     "video lead"
     "body  body"
@@ -791,10 +791,15 @@ section.tight { padding: clamp(3rem, 6vw, 4.5rem) 0; }
   display: block;
   object-fit: cover;
 }
-.about-lead { grid-area: lead; }
-.about-body { grid-area: body; }
-.about-lead,
+.about-lead { grid-area: lead; align-self: end; }
+.about-lead p {
+  color: var(--ink-soft);
+  font-weight: 600;
+  font-size: 1.12rem;
+  line-height: 1.65;
+}
 .about-body {
+  grid-area: body;
   background: var(--accent-tint);
   border: 1px solid var(--accent-tint-2);
   border-radius: var(--radius);
