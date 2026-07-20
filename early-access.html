@@ -20,7 +20,7 @@
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="./styles.css?v=20260716-3" />
+    <link rel="stylesheet" href="./styles.css?v=20260721-1" />
   </head>
   <body>
     <header class="site-header">
@@ -80,58 +80,86 @@
             </div>
           </div>
 
-          <div class="form-card">
-            <div id="form-body">
-              <h2>Join the list</h2>
-              <p>Just your email — updates are occasional and honest, and you can leave anytime.</p>
-              <!--
-                Formspree setup: create a free form at https://formspree.io,
-                then replace YOUR_FORM_ID below with the ID it gives you.
-              -->
-              <form id="waitlist-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
-                <div class="field">
-                  <label for="email">Email address</label>
-                  <input type="email" id="email" name="email" required autocomplete="email" placeholder="you@example.com" />
+          <div class="form-card quiz-card">
+            <!-- Set data-endpoint to your form backend URL (e.g. a Formspree endpoint) to capture submissions. -->
+            <div class="quiz" id="quiz" data-endpoint="">
+              <div class="quiz-progress" id="quiz-progress" hidden><i id="quiz-progress-bar"></i></div>
+
+              <!-- Step 1 — the hook -->
+              <section class="quiz-step is-active" data-step="hook">
+                <h2>Reserve your spot</h2>
+                <p class="quiz-sub">Three quick taps and you’re on the early-access list — about 20 seconds.</p>
+                <div class="quiz-field">
+                  <label for="q-name">First name</label>
+                  <input id="q-name" type="text" autocomplete="given-name" placeholder="Your first name" />
                 </div>
-                <div class="field">
-                  <label>What are you mainly looking for?</label>
-                  <div class="radio-group">
-                    <label class="radio-option">
-                      <input type="radio" name="interest" value="real-time correction" />
-                      <span>Real-time form correction while I practice</span>
-                    </label>
-                    <label class="radio-option">
-                      <input type="radio" name="interest" value="progress tracking" />
-                      <span>Tracking my balance and progress over time</span>
-                    </label>
-                    <label class="radio-option">
-                      <input type="radio" name="interest" value="both" />
-                      <span>Both, honestly</span>
-                    </label>
-                  </div>
+                <div class="quiz-field">
+                  <label for="q-contact">Email or mobile</label>
+                  <input id="q-contact" type="text" autocomplete="email" placeholder="you@example.com or +1 555 000 1234" />
+                  <span class="quiz-err" id="q-contact-err" hidden>Please enter a valid email address or mobile number.</span>
                 </div>
-                <button class="btn btn-primary btn-lg" type="submit" style="width: 100%; justify-content: center;">
-                  Get Early Access
-                </button>
-                <p class="form-fine">
-                  We only use your email for FormAlign updates. See our
-                  <a href="./privacy.html">privacy policy</a>.
-                </p>
-                <p class="form-fine" id="form-error" hidden style="color: #a33;">
-                  Something went wrong sending that — please try again, or email
-                  <a href="mailto:hello@formalign.fit">hello@formalign.fit</a> and we’ll add you by hand.
-                </p>
-              </form>
-            </div>
-            <div class="form-success" id="form-success" hidden>
-              <div class="big-check">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 7"/></svg>
-              </div>
-              <h2>You’re on the list.</h2>
-              <p>
-                Thank you — genuinely. It’s just me building this right now, and every signup
-                is real momentum. You’ll hear from me when there’s something worth telling you.
-              </p>
+                <button type="button" class="btn btn-primary btn-lg quiz-cta" data-action="start" style="width:100%; justify-content:center;">Get Early Access <span class="arrow">→</span></button>
+                <p class="quiz-fine">No spam, ever. Leave anytime. See our <a href="./privacy.html">privacy policy</a>.</p>
+              </section>
+
+              <!-- Step 2 — Q1 -->
+              <section class="quiz-step" data-step="q1">
+                <span class="quiz-count">Question 1 of 3</span>
+                <h3>Which best describes you?</h3>
+                <div class="quiz-opts" data-key="level" data-multi="false">
+                  <button type="button" class="quiz-opt" data-value="Beginner">Beginner</button>
+                  <button type="button" class="quiz-opt" data-value="Experienced practitioner">Experienced practitioner</button>
+                  <button type="button" class="quiz-opt" data-value="Studio owner or instructor">Studio owner / instructor</button>
+                  <button type="button" class="quiz-opt" data-value="Rehabilitation or recovery">Rehabilitation / recovery</button>
+                </div>
+                <div class="quiz-nav">
+                  <button type="button" class="quiz-back" data-action="back">← Back</button>
+                  <button type="button" class="btn btn-primary" data-action="next" disabled>Next</button>
+                </div>
+              </section>
+
+              <!-- Step 3 — Q2 (multi-select) -->
+              <section class="quiz-step" data-step="q2">
+                <span class="quiz-count">Question 2 of 3</span>
+                <h3>What’s your biggest challenge practicing at home?</h3>
+                <p class="quiz-hint">Select all that apply.</p>
+                <div class="quiz-opts" data-key="challenge" data-multi="true">
+                  <button type="button" class="quiz-opt" data-value="Unsure if posture, form, or alignment is correct">Unsure if my posture, form, or alignment is correct</button>
+                  <button type="button" class="quiz-opt" data-value="Joint or lower-back discomfort from bad form">Joint or lower-back discomfort from bad form</button>
+                  <button type="button" class="quiz-opt" data-value="Lose motivation with static video workouts">Lose motivation or feel unguided with static video workouts</button>
+                  <button type="button" class="quiz-opt" data-value="Hard to track progress over time">Hard to track my actual progress over time</button>
+                </div>
+                <div class="quiz-nav">
+                  <button type="button" class="quiz-back" data-action="back">← Back</button>
+                  <button type="button" class="btn btn-primary" data-action="next" disabled>Next</button>
+                </div>
+              </section>
+
+              <!-- Step 4 — Q3 (single-select) -->
+              <section class="quiz-step" data-step="q3">
+                <span class="quiz-count">Question 3 of 3</span>
+                <h3>Which feature are you most excited to try?</h3>
+                <div class="quiz-opts" data-key="feature" data-multi="false">
+                  <button type="button" class="quiz-opt" data-value="Real-time posture &amp; alignment feedback">Real-time posture and alignment feedback</button>
+                  <button type="button" class="quiz-opt" data-value="Personalized AI workout corrections">Personalized AI workout corrections</button>
+                  <button type="button" class="quiz-opt" data-value="Injury prevention &amp; muscle-fatigue alerts">Injury prevention and muscle-fatigue alerts</button>
+                  <button type="button" class="quiz-opt" data-value="Progress tracking &amp; posture analytics">Progress tracking and posture analytics</button>
+                </div>
+                <div class="quiz-nav">
+                  <button type="button" class="quiz-back" data-action="back">← Back</button>
+                  <button type="button" class="btn btn-primary" data-action="submit" disabled>Join the waitlist</button>
+                </div>
+              </section>
+
+              <!-- Step 5 — the payoff -->
+              <section class="quiz-step quiz-payoff" data-step="done">
+                <div class="big-check">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 7"/></svg>
+                </div>
+                <h2>You’re on the VIP Waitlist! 🎉</h2>
+                <p>We’ve reserved your spot for early access. Based on your answers, we’re customizing your trial to focus on <strong id="payoff-feature">your top priorities</strong>.</p>
+                <p class="quiz-fine">It’s just me building this right now — every signup is real momentum. You’ll hear from me when there’s something worth telling you.</p>
+              </section>
             </div>
           </div>
         </div>
@@ -179,6 +207,6 @@
       </div>
     </footer>
 
-    <script src="./script.js?v=20260716-3" defer></script>
+    <script src="./script.js?v=20260721-1" defer></script>
   </body>
 </html>
