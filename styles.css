@@ -773,10 +773,15 @@ section.tight { padding: clamp(3rem, 6vw, 4.5rem) 0; }
 .about-grid {
   display: grid;
   grid-template-columns: minmax(0, 1.05fr) minmax(0, 1fr);
-  gap: clamp(2.5rem, 5vw, 4.5rem);
+  grid-template-areas:
+    "video copy"
+    "photo copy";
+  grid-template-rows: auto 1fr;
+  column-gap: clamp(2.5rem, 5vw, 4.5rem);
+  row-gap: clamp(2rem, 4vw, 3.5rem);
   align-items: start;
 }
-.founder-video { margin: 0; position: sticky; top: 5.5rem; }
+.founder-video { grid-area: video; margin: 0; }
 .founder-video video {
   width: 100%;
   aspect-ratio: 16 / 9;
@@ -785,6 +790,16 @@ section.tight { padding: clamp(3rem, 6vw, 4.5rem) 0; }
   box-shadow: var(--shadow-sm);
   display: block;
   object-fit: cover;
+}
+.about-copy { grid-area: copy; }
+.about-photo {
+  grid-area: photo;
+  align-self: end;
+  width: 100%;
+  height: auto;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-sm);
+  display: block;
 }
 
 .about-copy p + p { margin-top: 1.2rem; }
@@ -1002,6 +1017,11 @@ section.tight { padding: clamp(3rem, 6vw, 4.5rem) 0; }
 
 @media (max-width: 900px) {
   .hero-grid, .hiw-block, .about-grid, .access-grid { grid-template-columns: 1fr; }
+  .about-grid {
+    grid-template-areas: "video" "copy" "photo";
+    grid-template-rows: auto;
+  }
+  .about-photo { align-self: auto; max-width: 460px; }
   .hiw-block.flip .hiw-visual { order: 0; }
   .dc-6, .dc-4, .dc-8 { grid-column: span 12; }
   .hero-photo { aspect-ratio: 4 / 3; }
