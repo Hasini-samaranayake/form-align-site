@@ -837,7 +837,7 @@ section.tight { padding: clamp(3rem, 6vw, 4.5rem) 0; }
   display: grid;
   grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
   gap: clamp(2.5rem, 6vw, 5rem);
-  align-items: center;
+  align-items: start;
   width: 100%;
 }
 .perk-list { list-style: none; display: grid; gap: 1.1rem; margin-top: 1.8rem; }
@@ -876,7 +876,7 @@ section.tight { padding: clamp(3rem, 6vw, 4.5rem) 0; }
   background: linear-gradient(90deg, var(--accent), #d9a271);
   transition: width 0.5s cubic-bezier(0.3, 0.6, 0.3, 1);
 }
-.quiz-step { display: none; }
+.quiz-step { display: none; padding: 0; }
 .quiz-step.is-active { display: block; animation: quizIn 0.4s ease both; }
 @keyframes quizIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: none; } }
 .quiz-step h2 { font-size: 1.5rem; margin-bottom: 0.35rem; }
