@@ -838,7 +838,7 @@ section.tight { padding: clamp(3rem, 6vw, 4.5rem) 0; }
 
 /* ---------- about page ---------- */
 
-.about-below { background: #ffffff; }
+.about-below { background: #ffffff; border-top: 1px solid var(--line); }
 
 .about-grid {
   display: grid;
