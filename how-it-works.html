@@ -20,7 +20,7 @@
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="./styles.css?v=20260721-5" />
+    <link rel="stylesheet" href="./styles.css?v=20260721-6" />
   </head>
   <body>
     <header class="site-header">
@@ -51,6 +51,63 @@
             A trainer judges your form by watching where your weight goes. FormAlign
             measures the same thing directly — through the mat itself.
           </p>
+        </div>
+      </section>
+
+      <!-- System pipeline diagram -->
+      <section class="tight" style="padding-top: 0;">
+        <div class="wrap">
+          <div class="pipeline">
+            <div class="pipe-stage reveal">
+              <div class="pipe-head">
+                <div class="pipe-icon">
+                  <svg viewBox="0 0 24 24" fill="currentColor" stroke="none" aria-hidden="true"><circle cx="6" cy="6" r="1.5"/><circle cx="12" cy="6" r="1.5"/><circle cx="18" cy="6" r="1.5"/><circle cx="6" cy="12" r="1.5"/><circle cx="12" cy="12" r="1.5"/><circle cx="18" cy="12" r="1.5"/><circle cx="6" cy="18" r="1.5"/><circle cx="12" cy="18" r="1.5"/><circle cx="18" cy="18" r="1.5"/></svg>
+                </div>
+                <span class="pipe-num">01</span>
+              </div>
+              <h3>Sensing</h3>
+              <p class="pipe-tech">Pressure-sensor array</p>
+              <p>
+                Pressure sensors embedded across the mat’s zones read your live weight
+                distribution at every point of contact — feet, hands, knees, hips.
+              </p>
+            </div>
+            <div class="pipe-link" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </div>
+            <div class="pipe-stage reveal reveal-d1">
+              <div class="pipe-head">
+                <div class="pipe-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="7" y="7" width="10" height="10" rx="2"/><path d="M9 3v4M15 3v4M9 17v4M15 17v4M3 9h4M3 15h4M17 9h4M17 15h4"/></svg>
+                </div>
+                <span class="pipe-num">02</span>
+              </div>
+              <h3>Processing</h3>
+              <p class="pipe-tech">Calibrate, then compare</p>
+              <p>
+                After an on-mat calibration to your body and setup, each reading is compared in
+                real time against instructor-validated target ranges for your exercise.
+              </p>
+              <p class="pipe-note">Rule-based thresholds today — <a href="#roadmap">learning is on the roadmap</a>.</p>
+            </div>
+            <div class="pipe-link" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </div>
+            <div class="pipe-stage reveal reveal-d2">
+              <div class="pipe-head">
+                <div class="pipe-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="2"/><path d="M16.24 7.76a6 6 0 0 1 0 8.48M7.76 16.24a6 6 0 0 1 0-8.48M19.07 4.93a10 10 0 0 1 0 14.14M4.93 19.07a10 10 0 0 1 0-14.14"/></svg>
+                </div>
+                <span class="pipe-num">03</span>
+              </div>
+              <h3>Real-time feedback</h3>
+              <p class="pipe-tech">On-mat cues</p>
+              <p>
+                Drift off target and the mat cues you instantly — audio and visual, no phone
+                required — with richer guidance in the companion app.
+              </p>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -152,7 +209,7 @@
       </section>
 
       <!-- AI roadmap -->
-      <section class="band">
+      <section class="band" id="roadmap">
         <div class="wrap-narrow">
           <div class="section-head reveal">
             <p class="eyebrow">The intelligence roadmap</p>
