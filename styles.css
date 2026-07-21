@@ -848,6 +848,8 @@ section.tight { padding: clamp(3rem, 6vw, 4.5rem) 0; }
   box-shadow: var(--shadow-md);
 }
 .access-photo img { width: 100%; height: auto; display: block; }
+/* drop the form so its top lines up with the h1, not the eyebrow */
+.access-grid .form-card { margin-top: 3rem; }
 .perk-list { list-style: none; display: grid; gap: 1.1rem; margin-top: 1.8rem; }
 .perk-list li { display: flex; gap: 0.9rem; align-items: flex-start; }
 .perk-list .check {
@@ -1095,6 +1097,7 @@ section.tight { padding: clamp(3rem, 6vw, 4.5rem) 0; }
 
 @media (max-width: 900px) {
   .hero-grid, .hiw-block, .about-grid, .access-grid { grid-template-columns: 1fr; }
+  .access-grid .form-card { margin-top: 0; }
   .about-grid {
     grid-template-areas: "video" "lead" "body" "hire";
     grid-template-rows: auto;
