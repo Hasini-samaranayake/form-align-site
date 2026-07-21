@@ -831,7 +831,7 @@ section.tight { padding: clamp(3rem, 6vw, 4.5rem) 0; }
 .access-hero {
   display: flex;
   align-items: center;
-  padding: clamp(3rem, 6vw, 5rem) 0;
+  padding: clamp(3rem, 6vw, 5rem) 0 0;
 }
 .access-grid {
   display: grid;
@@ -841,7 +841,7 @@ section.tight { padding: clamp(3rem, 6vw, 4.5rem) 0; }
   width: 100%;
 }
 .access-photo {
-  margin-top: clamp(2.5rem, 5vw, 4rem);
+  margin-top: clamp(3rem, 6vw, 5rem);
   width: 100%;
   border-radius: var(--radius);
   overflow: hidden;
