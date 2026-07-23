@@ -551,6 +551,30 @@ section.tight { padding: clamp(3rem, 6vw, 4.5rem) 0; }
 }
 .cta-band .btn-primary:hover { background: #fff; }
 
+/* ---------- access gate page ---------- */
+
+.access-gate {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.access-gate-inner {
+  max-width: 30em;
+  text-align: center;
+}
+.access-gate-logo {
+  width: 56px;
+  height: 56px;
+  border-radius: 14px;
+  margin: 0 auto 1.75rem;
+  display: block;
+}
+.access-gate .eyebrow { justify-content: center; }
+.access-gate h1 { margin-bottom: 1rem; }
+.access-gate .lede { margin: 0 auto 2rem; }
+.access-gate-note { margin-top: 1rem; font-size: 0.85rem; color: var(--ink-faint); }
+
 /* ---------- page hero (interior pages) ---------- */
 
 .page-hero { padding: clamp(3.5rem, 7vw, 5.5rem) 0 clamp(2rem, 4vw, 3rem); }
